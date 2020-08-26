@@ -1,0 +1,136 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=B612&family=Lato&family=Montserrat&display=swap");
+/*
+  font-family: 'B612', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+ */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+/* Headings */
+h1 {
+  font-family: "B612", sans-serif;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 53px;
+  letter-spacing: 0.05em;
+}
+h2 {
+  font-family: B612;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ff0000;
+}
+h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+/* Icons and Logos */
+.logo {
+  width: 170px;
+  height: 130px;
+}
+.icons {
+  width: 70px;
+  height: 70px;
+}
+/* Navbar */
+nav {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  padding: 2rem;
+}
+a {
+  text-decoration: none;
+}
+nav a {
+  color: #ff0000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  padding: 14px 16px;
+}
+nav a:hover {
+  cursor: pointer;
+  color: #c4c4c4;
+}
+.hero-container {
+  width: 100%;
+  height: 30%;
+}
+.content-wrapper {
+  width: 100%;
+  height: 50%;
+}
+/* Footer */
+footer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.footer-top-container {
+  min-height: 250px;
+  height: 70%;
+  width: 100%;
+  background-color: #c4c4c4;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 50px;
+  font-size: 18px;
+}
+.footer-top-container div {
+  text-align: left;
+  padding: 4rem;
+  margin-left: 20px;
+}
+.footer-top-container div a:hover {
+  cursor: pointer;
+  color: #ff0000;
+}
+.footer-top-container div span {
+  color: #ff0000;
+}
+.footer-bottom-container {
+  text-align: center;
+  padding: 2rem;
+  font-family: "Lato", sans-serif;
+  background: #a9a9a9;
+}
+/* Othe Styles Import */
+@import url("./aboutus.css");
+@import url("./conditions.css");
+@import url("home.css");
+@import url("./products.css");
+@import url("./registration.css");
+@import url("./routes.css");
+@import url("./specials.css");
