@@ -2,16 +2,16 @@
 <!-- Top Header Nav -->
 <?php
 echo '
-    <a href="#">Home</a>
-    <a href="#">Specials</a>
-    <a href="#"> Products</a>
-    <a href="#">Contact Us</a>
+    <a href="home">Home</a>
+    <a href="specials">Specials</a>
+    <a href="products"> Products</a>
+    <a href="contact-us">Contact Us</a>
     <div>
-      <img src="../resources/logo/onlinelogomaker-082520-1347-5475.png" alt="Warthog Express Line" class="logo">
+      <img src="resources/logo/onlinelogomaker-082520-1347-5475.png" alt="Warthog Express Line" class="logo">
     </div>
-    <a href="#">About Us</a>
-    <a href="#">Routes</a>
-    <a href="#">Conditions</a>
-    <a href="#">Registration</a>
+    <a href="about-us">About Us</a>
+    <a href="routes">Routes</a>
+    <a href="conditions">Conditions</a>
+    <a href="registration">Registration</a>
 ';
 ?>

@@ -13,7 +13,7 @@
 <body>
   <!-- Include Nav -->
   <nav>
-    <?php include './partials/navigation.php' ?>
+    <?php include './app/views/partials/navigation.php' ?>
   </nav>
 
   <!-- Main Content Start -->
@@ -52,7 +52,7 @@
 
   <!-- Include Footer -->
   <footer>
-    <?php include './partials/footer.php' ?>
+    <?php include './app/views/partials/footer.php' ?>
   </footer>
 </body>
 

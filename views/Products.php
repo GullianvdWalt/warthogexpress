@@ -7,13 +7,13 @@
   <title>Warthog Express | Products </title>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="public/css/main.css">
 </head>
 
 <body>
   <!-- Include Nav -->
   <nav>
-    <?php include './partials/navigation.php' ?>
+    <?php include './app/views/partials/navigation.php' ?>
   </nav>
 
   <!-- Main Content Start -->
@@ -34,7 +34,7 @@
 
   <!-- Include Footer -->
   <footer>
-    <?php include './partials/footer.php' ?>
+    <?php include './app/views/partials/footer.php' ?>
   </footer>
 </body>
 

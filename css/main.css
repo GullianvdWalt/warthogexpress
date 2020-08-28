@@ -6,6 +6,15 @@
   font-family: 'Montserrat', sans-serif;
  */
 
+/* Othe Styles Import */
+@import "./aboutus.css";
+@import url("./conditions.css");
+@import "../css/home.css";
+@import url("./products.css");
+@import url("./registration.css");
+@import url("./routes.css");
+@import url("./specials.css");
+
 /* Reset */
 * {
   margin: 0;
@@ -43,9 +52,10 @@ h2 {
 }
 h3 {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 22px;
   letter-spacing: 0.05em;
+  margin-bottom: 20px;
 }
 /* Icons and Logos */
 .logo {
@@ -113,6 +123,9 @@ footer {
   padding: 4rem;
   margin-left: 20px;
 }
+.footer-details-container a {
+  margin-bottom: 10px;
+}
 .footer-top-container div a:hover {
   cursor: pointer;
   color: #ff0000;
@@ -126,11 +139,3 @@ footer {
   font-family: "Lato", sans-serif;
   background: #a9a9a9;
 }
-/* Othe Styles Import */
-@import url("./aboutus.css");
-@import url("./conditions.css");
-@import url("home.css");
-@import url("./products.css");
-@import url("./registration.css");
-@import url("./routes.css");
-@import url("./specials.css");
