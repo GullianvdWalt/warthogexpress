@@ -1,0 +1,39 @@
+#hero-container-routes {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 1;
+  z-index: 20;
+}
+.routes-container {
+  min-height: 700px;
+  text-align: center;
+  padding: 2rem;
+  margin: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.routes-details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.routes-details-container-col {
+  width: 50%;
+  text-align: left;
+  padding: 1rem;
+}
+.routes-details-container-col span {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.routes-details-container-col a:hover {
+  cursor: pointer;
+  color: #a9a9a9;
+}
+.spacer {
+  margin-top: 40px;
+}

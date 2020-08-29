@@ -7,13 +7,14 @@
  */
 
 /* Othe Styles Import */
-@import "./aboutus.css";
-@import url("./conditions.css");
-@import "../css/home.css";
-@import url("./products.css");
-@import url("./registration.css");
-@import url("./routes.css");
-@import url("./specials.css");
+@import "aboutus.css";
+@import "conditions.css";
+@import "home.css";
+@import "products.css";
+@import "registration.css";
+@import "routes.css";
+@import "specials.css";
+@import "contactus.css";
 
 /* Reset */
 * {
@@ -38,12 +39,14 @@ body {
 h1 {
   font-family: "B612", sans-serif;
   font-weight: bold;
-  font-size: 44px;
+  font-size: 50px;
   line-height: 53px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.07em;
+  color: #fff;
+  margin-top: 320px;
 }
 h2 {
-  font-family: B612;
+  font-family: "B612", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -94,11 +97,12 @@ nav a:hover {
 }
 .hero-container {
   width: 100%;
-  height: 30%;
+  margin-top: 1rem;
+  padding: 1rem;
+  min-height: 1000px;
 }
 .content-wrapper {
   width: 100%;
-  height: 50%;
 }
 /* Footer */
 footer {

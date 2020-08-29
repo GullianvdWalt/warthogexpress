@@ -1,0 +1,57 @@
+.hero-container-registration {
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.grey-heading {
+  color: #6a6a6a;
+  text-align: center;
+  margin-top: 100px;
+}
+.registration-container {
+  min-height: 700px;
+  text-align: center;
+  padding: 2rem;
+  margin: 4rem;
+}
+form {
+  border: 1px solid #a9a9a9;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  padding: 2rem;
+  margin: 0 15%;
+}
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  margin: 2rem 20%;
+}
+label {
+  font-size: 18px;
+}
+input {
+  width: 40%;
+  text-align: left;
+  font-size: 18px;
+}
+button {
+  outline: none;
+  text-transform: uppercase;
+  border: 1px solid #6c6c6c;
+  font-size: 18px;
+  background: none;
+  padding: 5px;
+  width: 120px;
+  border-radius: 15px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #6a6a6a;
+  color: #fff;
+}

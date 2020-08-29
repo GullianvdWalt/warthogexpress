@@ -1,0 +1,40 @@
+#hero-container-conditions {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 1;
+  z-index: 20;
+}
+.conditions-heading {
+  text-align: center;
+}
+.conditions-container {
+  min-height: 700px;
+  text-align: center;
+  padding: 2rem;
+  margin: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.conditions-container-col {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.conditions-container-row {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+}
+.spacer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: left;
+  padding: 1rem;
+}
+.spacer hr {
+  width: 50%;
+}

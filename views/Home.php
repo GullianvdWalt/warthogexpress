@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Warthog Express | Home </title>
+
   <link rel="icon" href="resources/logo/onlinelogomaker-082520-1347-5475.png">
   <!-- Styles -->
   <link rel="stylesheet" href="css/main.css">
