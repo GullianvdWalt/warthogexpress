@@ -1,8 +1,13 @@
 <?php
 
 // Routes 
-
 Route::set('index.php', function () {
+    Home::CreateView('Home');
+});
+Route::set('/', function () {
+    Home::CreateView('Home');
+});
+Route::set('', function () {
     Home::CreateView('Home');
 });
 
