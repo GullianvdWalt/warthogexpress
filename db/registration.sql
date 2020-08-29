@@ -1,5 +1,5 @@
 CREATE DATABASE `usersDB`;
-USE `usersDB`;
+USE `users_database`;
 CREATE TABLE
 IF NOT EXISTS `registration`
 (

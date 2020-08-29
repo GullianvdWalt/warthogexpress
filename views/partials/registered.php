@@ -1,0 +1,1 @@
+<span>Registration Successfull!</span>

@@ -40,4 +40,5 @@ Route::set('products', function () {
 });
 Route::set('registration', function () {
     Registration::CreateView('RegistrationForm');
+    Registration::insert();
 });
