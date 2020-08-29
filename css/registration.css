@@ -40,7 +40,8 @@ input {
   text-align: left;
   font-size: 18px;
 }
-button {
+button,
+#register {
   outline: none;
   text-transform: uppercase;
   border: 1px solid #6c6c6c;
@@ -49,8 +50,11 @@ button {
   padding: 5px;
   width: 120px;
   border-radius: 15px;
+  text-align: center;
 }
-button:hover {
+
+button:hover,
+#register:hover {
   cursor: pointer;
   background-color: #6a6a6a;
   color: #fff;

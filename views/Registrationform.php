@@ -1,36 +1,7 @@
 <?php
-
-namespace ITEC301_CA_WarthogExpressLiner\views;
-
-use ITEC301_CA_WarthogExpressLiner\functions\validate;
-
-if (!empty($_POST["registration"])) {
-  $sa_id = filter_var($_POST["sa_id"], FILTER_SANITIZE_STRING);
-  $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
-  $email = filter_var($_POST["email"], FILTER_SANITIZE_STRING);
-  $cell = filter_var($_POST["cell"], FILTER_SANITIZE_STRING);
-  require_once("functions/validate.php");
-  // Form validation
-  // Object
-  $validate = new Validate();
-  $errorMessage = $validate->validateUser($sa_id, $name, $email, $cell);
-  // No errors
-  if (empty($errorMessage)) {
-    // Does the user exist
-    $userCount = $validate->doesMemberExist($sa_id, $email);
-    // User does not exist
-    if ($userCount == 0) {
-      $insert_id = $validate->insertUser($sa_id, $name, $email, $cell);
-      if (!empty($insert_id)) {
-        // All form data has been submitted
-        header("Location: views/partials/registered.php");
-      }
-    } else {
-      // User exists
-      $errorMessage[] = "User already exists.";
-    }
-  }
-}
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+require_once('classes/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,37 +30,26 @@ if (!empty($_POST["registration"])) {
     <!-- Hero Container End -->
 
     <div class="registration-container">
-      <form action="" id="registration-form" method="post" name="registrationform">
-        <?php
-        if (!empty($errorMessage) && is_array($errorMessage)) {
-        ?>
-          <div class="error-message">
-            <?php
-            foreach ($errorMessage as $message) {
-              echo $message . "<br/>";
-            }
-            ?>
-          </div>
-        <?php } ?>
+      <form action="" id="registration-form" method=POST name="registrationform">
         <div class="form-group">
           <label for="id">SA ID</label>
-          <input type="text" id="sa_id" name="sa_id" value="<?php if (isset($_POST['sa_id'])) echo $_POST['sa_id']; ?>" required>
+          <input type="text" id="sa_id" name="sa_id" required>
         </div>
         <div class="form-group">
           <label for="name">Name & Surname</label>
-          <input type="text" id="name" name="name" value="<?php if (isset($_POST['name'])) echo $_POST['name']; ?>" required>
+          <input type="text" id="name" name="name" required>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="text" id="email" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" required>
+          <input type="text" id="email" name="email" required>
         </div>
         <div class="form-group">
           <label for="cell">Cell</label>
-          <input type="text" id="cell" name="cell" value="<?php if (isset($_POST['cell'])) echo $_POST['cell']; ?>" required>
+          <input type="text" id="cell" name="cell" required>
         </div>
         <div class="form-group">
           <button>Cancel</button>
-          <button type="submit" name="register_user">Submit</button>
+          <input type="submit" id="register" name="create" value="Submit">
         </div>
       </form>
     </div>
@@ -101,6 +61,51 @@ if (!empty($_POST["registration"])) {
   <footer>
     <?php include 'partials/footer.php' ?>
   </footer>
+  <!-- JS AJAX -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      // User clicks on submit
+      $('#register').click(function(e) {
+
+        var valid = this.form.checkValidity();
+
+        if (valid) {
+          var sa_id = $('#sa_id').val();
+          var name = $('#name').val();
+          var email = $('#email').val();
+          var cell = $('#cell').val();
+
+
+          // e.preventDefault();
+          $.ajax({
+            type: 'POST',
+            url: 'classes/dbProcess.php',
+            data: {
+              sa_id: sa_id,
+              name: name,
+              email: email,
+              cell: cell
+            }
+            // success: function(data) {
+            //   Swal.fire({
+            //     'title': 'successful',
+            //     'text': data,
+            //     'type': 'success'
+            //   })
+            // },
+            // error: function(data) {
+            //   Swal.fire({
+            //     'title': 'Errors',
+            //     'text': 'There were errors while saving the data.',
+            //     'type': 'error'
+            //   })
+            // }
+          });
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
