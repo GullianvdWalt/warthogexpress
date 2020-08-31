@@ -14,7 +14,7 @@ require_once('classes/config.php');
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body onload='document.registrationform.email.focus()'>
   <!-- Include Nav -->
   <nav>
     <?php include 'partials/navigation.php' ?>
@@ -49,7 +49,7 @@ require_once('classes/config.php');
         </div>
         <div class="form-group">
           <button>Cancel</button>
-          <input type="submit" id="register" name="create" value="Submit">
+          <input type="submit" id="register" name="create" value="Submit" onclick="validateEmail(document.registrationform.email)">
         </div>
       </form>
     </div>
@@ -62,7 +62,11 @@ require_once('classes/config.php');
     <?php include 'partials/footer.php' ?>
   </footer>
   <!-- JS AJAX -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <!-- Sweet Alert 2 for JS Alerts -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <!-- JS -->
+  <script src="js/script.js"></script>
   <script type="text/javascript">
     $(function() {
       // User clicks on submit
@@ -86,21 +90,21 @@ require_once('classes/config.php');
               name: name,
               email: email,
               cell: cell
+            },
+            success: function(data) {
+              Swal.fire({
+                'title': 'successful',
+                'text': data,
+                'type': 'success'
+              })
+            },
+            error: function(data) {
+              Swal.fire({
+                'title': 'Errors',
+                'text': 'There were errors while saving the data.',
+                'type': 'error'
+              })
             }
-            // success: function(data) {
-            //   Swal.fire({
-            //     'title': 'successful',
-            //     'text': data,
-            //     'type': 'success'
-            //   })
-            // },
-            // error: function(data) {
-            //   Swal.fire({
-            //     'title': 'Errors',
-            //     'text': 'There were errors while saving the data.',
-            //     'type': 'error'
-            //   })
-            // }
           });
         }
       });
